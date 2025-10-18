@@ -148,12 +148,6 @@ int main(void)
 	             }
 	         }
 
-
-//	         if (timer2_flag == 1) {
-//	             setTimer2(100); // Lên lại dây cót
-//
-//	             HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin);
-//	         }
 	         if (timer3_flag == 1) {
 	             setTimer3(100);
 
@@ -328,13 +322,15 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-int counter = 25;
-int led_DOT_ct = 50;
-int Ledstate = 0;
+//int counter = 25;
+//int led_DOT_ct = 50;
+//int Ledstate = 0;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	timer1run();
 	timer2run();
 	timer3run();
+	timer4run();
+	timer5run();
 //
 ////	counter--;
 ////	led_DOT_ct--;
