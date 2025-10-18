@@ -139,21 +139,18 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  if (timer1_flag == 1) {
-	             setTimer1(1);
+	      setTimer1(1);
+	      updateLEDMatrix(column_index);
+	      column_index++;
+	     if (column_index >= MAX_LED_MATRIX) {
+	        column_index = 0;
+	      }
+	  }
 
-	             updateLEDMatrix(column_index);
-	             column_index++;
-	             if (column_index >= MAX_LED_MATRIX) {
-	                 column_index = 0;
-	             }
-	         }
-
-	         if (timer3_flag == 1) {
-	             setTimer3(100);
-
-	             shiftLeft();
-	         }
-
+	  if (timer3_flag == 1) {
+	       setTimer3(100);
+	       shiftLeft();
+	  }
 	  if(timer4_flag == 1){
 		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
 		  setTimer4(50);

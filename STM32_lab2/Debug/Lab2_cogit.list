@@ -146,41 +146,38 @@ int main(void)
  800018c:	681b      	ldr	r3, [r3, #0]
  800018e:	2b01      	cmp	r3, #1
  8000190:	d10e      	bne.n	80001b0 <main+0x64>
-	             setTimer1(1);
+	      setTimer1(1);
  8000192:	2001      	movs	r0, #1
  8000194:	f000 fc26 	bl	80009e4 <setTimer1>
-
-	             updateLEDMatrix(column_index);
+	      updateLEDMatrix(column_index);
  8000198:	6838      	ldr	r0, [r7, #0]
  800019a:	f000 fa77 	bl	800068c <updateLEDMatrix>
-	             column_index++;
+	      column_index++;
  800019e:	683b      	ldr	r3, [r7, #0]
  80001a0:	3301      	adds	r3, #1
  80001a2:	603b      	str	r3, [r7, #0]
-	             if (column_index >= MAX_LED_MATRIX) {
+	     if (column_index >= MAX_LED_MATRIX) {
  80001a4:	2208      	movs	r2, #8
  80001a6:	683b      	ldr	r3, [r7, #0]
  80001a8:	4293      	cmp	r3, r2
  80001aa:	db01      	blt.n	80001b0 <main+0x64>
-	                 column_index = 0;
+	        column_index = 0;
  80001ac:	2300      	movs	r3, #0
  80001ae:	603b      	str	r3, [r7, #0]
-	             }
-	         }
+	      }
+	  }
 
-	         if (timer3_flag == 1) {
+	  if (timer3_flag == 1) {
  80001b0:	4b2b      	ldr	r3, [pc, #172]	; (8000260 <main+0x114>)
  80001b2:	681b      	ldr	r3, [r3, #0]
  80001b4:	2b01      	cmp	r3, #1
  80001b6:	d104      	bne.n	80001c2 <main+0x76>
-	             setTimer3(100);
+	       setTimer3(100);
  80001b8:	2064      	movs	r0, #100	; 0x64
  80001ba:	f000 fc3d 	bl	8000a38 <setTimer3>
-
-	             shiftLeft();
+	       shiftLeft();
  80001be:	f000 fb45 	bl	800084c <shiftLeft>
-	         }
-
+	  }
 	  if(timer4_flag == 1){
  80001c2:	4b28      	ldr	r3, [pc, #160]	; (8000264 <main+0x118>)
  80001c4:	681b      	ldr	r3, [r3, #0]
