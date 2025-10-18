@@ -1,6 +1,10 @@
-timer_for_flag.c:15:6:timer1run	4	static
-timer_for_flag.c:21:6:setTimer1	16	static
-timer_for_flag.c:25:6:timer3run	4	static
-timer_for_flag.c:31:6:setTimer3	16	static
-timer_for_flag.c:35:6:timer2run	4	static
-timer_for_flag.c:41:6:setTimer2	16	static
+timer_for_flag.c:19:6:timer1run	4	static
+timer_for_flag.c:25:6:setTimer1	16	static
+timer_for_flag.c:29:6:timer3run	4	static
+timer_for_flag.c:35:6:setTimer3	16	static
+timer_for_flag.c:39:6:timer2run	4	static
+timer_for_flag.c:45:6:setTimer2	16	static
+timer_for_flag.c:49:6:timer4run	4	static
+timer_for_flag.c:55:6:setTimer4	16	static
+timer_for_flag.c:59:6:timer5run	4	static
+timer_for_flag.c:65:6:setTimer5	16	static
